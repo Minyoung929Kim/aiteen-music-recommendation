@@ -1,0 +1,25 @@
+Grade
+1) Where do you live during the semester? Please select all.
+2) Recently, how many hours did you sleep each day in a week, on average?
+3) Recently, I go to bed and wake up around the same time every school day (1 - Completely disagree to 5  - Completely agree, 3 is neutral)
+4) I tend to have good energy levels (1 - Completely disagree to 5  - Completely agree, 3 is neutral)
+5) Recently, I have had a loss of appetite ( 1 - Completely disagree to 5  - Completely agree, 3 is neutral)
+6) I tend to eat reasonably healthy foods (1 - Completely disagree to 5  - Completely agree, 3 is neutral)
+7) Recently, I have eaten more unhealthy food than usual (1 - Completely disagree to 5  - Completely agree,)
+8) How long have you been exercising a week?
+9) Recently, I have exercised less than normal (1 - Completely disagree to 5  - Completely agree, 3 is no change)
+10) Recently, I feel more fatigued (tired) than normal (1 - Completely disagree to 5  - Completely agree, 3 is neutral)
+11) I tend to have reasonably good concentration (1 - Completely disagree to 5  - Completely agree)
+12) Recently, I have struggled to concentrate (1 - Completely disagree to 5  - Completely agree, 3 is neutral)
+13) I tend to have reasonable self-esteem (i.e. confidence in my own abilities/worth) (1 - Completely disagree to 5  - Completely agree)
+14) Recently, my self-esteem has been lower than normal (1 - Completely disagree to 5  - Completely agree,)
+15)  I tend to have good relationships with my family/friends (1 - Completely disagree to 5  - Completely agree)
+16) Recently, I have been having friendship/relationship problems (1 - Completely disagree to 5  - Completely agree)
+17) Which of the following is likely to cause you to feel stressed? (tick all that apply)
+18) Do you have any ways to release stress? (e.g. meditation)
+19) Do you have someone you can talk to about personal thoughts?
+20) Do you think you spent sufficient time with your family over the last few weeks? (Virtual meetings also)
+21) Recently, how often do you meet with other people for purposes aside from school?
+22) Recently, how satisfied have you been with your lifestyle?
+23) To what extent do you think that mental health care education should be considered seriously?
+24) I am able to cope with sudden stress.
