@@ -10,7 +10,7 @@ import 'package:http/http.dart' as http;
 
 Future<http.Response> getRecommendation(String survey) async {
   return http.post(
-    Uri.parse("https://test-recommend.herokuapp.com/predict"),
+    Uri.parse("https://aiteen-music-recommendation.herokuapp.com/predict"),
     headers: {
       'Content-Type': 'application/json',
       "Access-Control-Allow-Origin": "*", // Required for CORS support to work
@@ -104,8 +104,7 @@ class _MyAppState extends State<MyApp> {
                         answers.asMap().forEach(
                             (index, ans) => qa_pair[questions[index]] = ans);
                         var encoded = json.encode(qa_pair);
-                        var recommendation =
-                            await getRecommendation(sample_entry);
+                        var recommendation = await getRecommendation(encoded);
                         // print(recommendation.statusCode);
                         // print(recommendation.body);
 
