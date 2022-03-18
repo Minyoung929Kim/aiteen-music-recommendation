@@ -44,7 +44,7 @@ Future<Task> getDepressionAnalysisTask() {
               value: 'More than 5 hours and less than 7 hours'),
           TextChoice(
               text: 'More than 7 hours and less than 9 hours',
-              value: 'More than 7 hours and less than 9 hours'),
+              value: 'More than 7 hours less than 9 hours'),
           TextChoice(text: '9 hours or more', value: '9 hours or more'),
         ]),
       ),
@@ -111,7 +111,7 @@ Future<Task> getDepressionAnalysisTask() {
       QuestionStep(
         title: '8) How long have you been exercising a week?',
         answerFormat: SingleChoiceAnswerFormat(textChoices: [
-          TextChoice(text: 'I don\'t exercise', value: 'I don\'t exercise'),
+          TextChoice(text: "I don't exercise", value: "I don't exercise"),
           TextChoice(text: '< 30 minutes', value: '< 30 minutes'),
           TextChoice(
               text: 'Between 30 minutes and 1 hour',
@@ -121,7 +121,7 @@ Future<Task> getDepressionAnalysisTask() {
               value: 'More than 1 hour and less than 3 hours'),
           TextChoice(
               text: 'More than 3 hours and less than 6 hours',
-              value: 'More than 3 hours and less than 6 hours'),
+              value: 'More 3 hours and less than 6 hours'),
           TextChoice(text: 'More than 6 hours', value: 'More than 6 hours'),
         ]),
       ),
@@ -234,7 +234,7 @@ Future<Task> getDepressionAnalysisTask() {
           TextChoice(
               text: 'Relationship with teachers',
               value: 'Relationship with teachers'),
-          TextChoice(text: 'Exam Prep/Result', value: 'Exam Prep/Result'),
+          TextChoice(text: 'Exam Prep/Result', value: 'Exam Prep / Result'),
           TextChoice(
               text: 'Thoughts about my future',
               value: 'Thoughts about my future'),
@@ -250,9 +250,9 @@ Future<Task> getDepressionAnalysisTask() {
           TextChoice(text: 'Yes', value: 'Yes'),
           TextChoice(
               text: 'Yes, but I have not been able to do so recently',
-              value: 'Yes, but I have not been able to do so recently'),
+              value: 'Yes, but I have not been able to do so recently.'),
           TextChoice(
-              text: 'No, I do not have one', value: 'No, I do not have one'),
+              text: 'No, I do not have one.', value: 'No, I do not have one.'),
         ]),
       ),
       QuestionStep(
