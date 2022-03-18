@@ -31,6 +31,7 @@ dependencies:
     sdk: flutter
   survey_kit: ^0.0.21
   http:
+  url_launcher:
 
 
   # The following adds the Cupertino Icons font to your application.

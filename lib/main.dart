@@ -1,12 +1,14 @@
 import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:survey_kit/survey_kit.dart';
 import 'package:survey/task.dart';
 import 'dart:developer';
 import 'package:http/http.dart' as http;
+import 'package:url_launcher/url_launcher.dart';
 
 Future<http.Response> getRecommendation(String survey) async {
   return http.post(
@@ -101,17 +103,21 @@ class _MyAppState extends State<MyApp> {
                           }
                         }
                         Map qa_pair = {};
+
                         answers.asMap().forEach(
                             (index, ans) => qa_pair[questions[index]] = ans);
+                        qa_pair["1) Where do you live during the semester? Please select all."] =
+                            "Dorm";
                         var encoded = json.encode(qa_pair);
                         var recommendation = await getRecommendation(encoded);
+                        // {"sing": [[link, song name], ....]}
                         // print(recommendation.statusCode);
                         // print(recommendation.body);
-
+                        var rec_map = json.decode(recommendation.body);
                         // navigate to new page
                         Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => MusicScreen(
-                                recommendation: recommendation.body)));
+                            builder: (context) =>
+                                MusicScreen(songs: rec_map["songs"])));
                       } else {
                         // not completed
                         inspect(result);
@@ -242,18 +248,43 @@ class _MyAppState extends State<MyApp> {
 }
 
 class MusicScreen extends StatelessWidget {
-  MusicScreen({Key? key, required this.recommendation}) : super(key: key);
-  String recommendation;
+  MusicScreen({Key? key, required this.songs}) : super(key: key);
+  List songs; // [[link1, name1], [link2, name2],....]
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Recommended Music')),
-      body: Center(
-        child: Text(
-          recommendation,
-          style: TextStyle(fontSize: 24.0),
-        ),
-      ),
-    );
-  }
+        appBar: AppBar(title: Text('Recommended Music')),
+        body: ListView.builder(
+          itemBuilder: (BuildContext, index) {
+            return Card(
+              child: ListTile(
+                // leading: CircleAvatar(backgroundImage: AssetImage(images[index]),),
+                title: RichText(
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      TextSpan(
+                        text: songs[index][1],
+                        style: TextStyle(color: Colors.blue),
+                        recognizer: TapGestureRecognizer()
+                          ..onTap = () {
+                            launch("https://open.spotify.com/track/" +
+                                songs[index][0]
+                                    .replaceAll("spotify:track:", ""));
+                          },
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            );
+          },
+          itemCount: songs.length,
+          shrinkWrap: true,
+          padding: EdgeInsets.all(5),
+          scrollDirection: Axis.vertical,
+        ));
+  } // Scaffold: template or screen on Flutter. Appbar:something on top of the string, Body: the center of the screen
 }
