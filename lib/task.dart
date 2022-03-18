@@ -33,7 +33,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '2) Recently, how many hours did you sleep each day in a week, on average? Please note that the term "recently" refers to the past two or three weeks.',
+            '2) Recently, how many hours did you sleep each day in a week, on average?',
         answerFormat: SingleChoiceAnswerFormat(textChoices: [
           TextChoice(text: '3 hours or less', value: '3 hours or less'),
           TextChoice(
@@ -74,7 +74,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '5) Recently, I have had a loss of appetite (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '5) Recently, I have had a loss of appetite ( 1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -98,7 +98,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '7) Recently, I have eaten more unhealthy food than usual (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '7) Recently, I have eaten more unhealthy food than usual (1 - Completely disagree to 5 - Completely agree,)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -127,7 +127,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '9) Recently, I have exercised less than normal (1 - Completely disagree to 5 - Completely agree, 3 is no change)',
+            '9) Recently, I have exercised less than normal (1 - Completely disagree to 5  - Completely agree, 3 is no change)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -139,7 +139,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '10) Recently, I feel more fatigued (tired) than normal (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '10) Recently, I feel more fatigued (tired) than normal (1 - Completely disagree to 5  - Completely agree, 3 is neutral)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -151,7 +151,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '11)  I tend to have reasonably good concentration (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '11) I tend to have reasonably good concentration (1 - Completely disagree to 5  - Completely agree)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -163,7 +163,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '12) Recently, I have struggled to concentrate (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '12) Recently, I have struggled to concentrate (1 - Completely disagree to 5  - Completely agree, 3 is neutral)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -175,7 +175,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '13) I tend to have reasonable self-esteem (i.e confidence in my own abilities/worth) (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '13) I tend to have reasonable self-esteem (i.e. confidence in my own abilities/worth) (1 - Completely disagree to 5  - Completely agree)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -187,7 +187,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '14) Recently, my self-esteem has been lower than normal (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '14) Recently, my self-esteem has been lower than normal (1 - Completely disagree to 5  - Completely agree,)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -199,7 +199,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '15) I tend to have good relationships with my family/friends (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '15)  I tend to have good relationships with my family/friends (1 - Completely disagree to 5  - Completely agree)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -211,7 +211,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '16) Recently, I have been having friendship/relationship problems (1 - Completely disagree to 5 - Completely agree, 3 is neutral)',
+            '16) Recently, I have been having friendship/relationship problems (1 - Completely disagree to 5  - Completely agree)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -257,7 +257,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '19) Do you have someone you can talk to about personal thoughts? (e.g. meditation)',
+            '19) Do you have someone you can talk to about personal thoughts?',
         answerFormat: SingleChoiceAnswerFormat(textChoices: [
           TextChoice(text: 'Yes', value: 'Yes'),
           TextChoice(text: 'No', value: 'No'),
@@ -266,7 +266,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '20) Do you think you spent sufficient time  with your family over the last few weeks? (Virtual meetings also counts)',
+            '20) Do you think you spent sufficient time with your family over the last few weeks? (Virtual meetings also)',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
@@ -301,7 +301,7 @@ Future<Task> getDepressionAnalysisTask() {
       ),
       QuestionStep(
         title:
-            '23)To what extend do you think that mental health care education should be considered seriously?',
+            '23) To what extent do you think that mental health care education should be considered seriously?',
         answerFormat: ScaleAnswerFormat(
           step: 1,
           minimumValue: 1,
