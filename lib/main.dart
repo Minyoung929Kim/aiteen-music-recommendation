@@ -254,37 +254,59 @@ class MusicScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: Text('Recommended Music')),
-        body: ListView.builder(
-          itemBuilder: (BuildContext, index) {
-            return Card(
-              child: ListTile(
-                // leading: CircleAvatar(backgroundImage: AssetImage(images[index]),),
-                title: RichText(
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        style: TextStyle(color: Colors.black),
-                      ),
-                      TextSpan(
-                        text: songs[index][1],
-                        style: TextStyle(color: Colors.yellow[700]),
-                        recognizer: TapGestureRecognizer()
-                          ..onTap = () {
-                            launch("https://open.spotify.com/track/" +
-                                songs[index][0]
-                                    .replaceAll("spotify:track:", ""));
-                          },
-                      ),
-                    ],
+        body:
+            Column(mainAxisAlignment: MainAxisAlignment.spaceEvenly, children: [
+          Flexible(
+              child: ListView.builder(
+            itemBuilder: (BuildContext, index) {
+              return Card(
+                child: ListTile(
+                  // leading: CircleAvatar(backgroundImage: AssetImage(images[index]),),
+                  title: RichText(
+                    text: TextSpan(
+                      children: [
+                        TextSpan(
+                          style: TextStyle(color: Colors.black),
+                        ),
+                        TextSpan(
+                          text: songs[index][1],
+                          style: TextStyle(color: Colors.yellow[700]),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              launch("https://open.spotify.com/track/" +
+                                  songs[index][0]
+                                      .replaceAll("spotify:track:", ""));
+                            },
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            );
-          },
-          itemCount: songs.length,
-          shrinkWrap: true,
-          padding: EdgeInsets.all(5),
-          scrollDirection: Axis.vertical,
-        ));
+              );
+            },
+            itemCount: songs.length,
+            shrinkWrap: true,
+            padding: EdgeInsets.all(5),
+            scrollDirection: Axis.vertical,
+          )),
+          //another component
+          RichText(
+            text: TextSpan(
+              children: [
+                TextSpan(
+                  style: TextStyle(color: Colors.black),
+                ),
+                TextSpan(
+                  text: "AI Teen Homepage",
+                  style: TextStyle(color: Colors.blue),
+                  recognizer: TapGestureRecognizer()
+                    ..onTap = () {
+                      launch("https://aiteen.wixsite.com/website");
+                    },
+                ),
+              ],
+            ),
+          ),
+        ]));
   } // Scaffold: template or screen on Flutter. Appbar:something on top of the string, Body: the center of the screen
 }
