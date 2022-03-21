@@ -247,7 +247,7 @@ Future<Task> getDepressionAnalysisTask() {
       QuestionStep(
         title: '18) Do you have any ways to release stress? (e.g. meditation)',
         answerFormat: SingleChoiceAnswerFormat(textChoices: [
-          TextChoice(text: 'Yes', value: 'Yes'),
+          TextChoice(text: 'Yes.', value: 'Yes.'),
           TextChoice(
               text: 'Yes, but I have not been able to do so recently',
               value: 'Yes, but I have not been able to do so recently.'),
@@ -283,7 +283,7 @@ Future<Task> getDepressionAnalysisTask() {
         answerFormat: SingleChoiceAnswerFormat(textChoices: [
           TextChoice(
               text: 'More than once a week', value: 'More than once a week'),
-          TextChoice(text: '1~3 times a month', value: '1~3 times a month'),
+          TextChoice(text: '1-3 times a month', value: '1-3 times a month'),
           TextChoice(text: 'Rarely', value: 'Rarely'),
         ]),
       ),

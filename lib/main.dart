@@ -106,8 +106,8 @@ class _MyAppState extends State<MyApp> {
 
                         answers.asMap().forEach(
                             (index, ans) => qa_pair[questions[index]] = ans);
-                        qa_pair["1) Where do you live during the semester? Please select all."] =
-                            "Dorm";
+                        // qa_pair["1) Where do you live during the semester? Please select all."] =
+                        //     "Dorm";
                         var encoded = json.encode(qa_pair);
                         var recommendation = await getRecommendation(encoded);
                         // {"sing": [[link, song name], ....]}
@@ -126,7 +126,7 @@ class _MyAppState extends State<MyApp> {
                     task: task,
                     showProgress: true,
                     localizations: {
-                      'cancel': 'Cancel',
+                      'cancel': '',
                       'next': 'Next',
                     },
                     themeData: Theme.of(context).copyWith(
@@ -135,27 +135,27 @@ class _MyAppState extends State<MyApp> {
                       ).copyWith(
                         onPrimary: Colors.white,
                       ),
-                      primaryColor: Colors.cyan,
+                      primaryColor: Colors.yellow[700],
                       backgroundColor: Colors.white,
                       appBarTheme: const AppBarTheme(
                         color: Colors.white,
                         iconTheme: IconThemeData(
-                          color: Colors.cyan,
+                          color: Color.fromRGBO(251, 192, 45, 1),
                         ),
                         titleTextStyle: TextStyle(
-                          color: Colors.cyan,
+                          color: Colors.black,
                         ),
                       ),
                       iconTheme: const IconThemeData(
-                        color: Colors.cyan,
+                        color: Color.fromRGBO(251, 192, 45, 1),
                       ),
                       textSelectionTheme: TextSelectionThemeData(
-                        cursorColor: Colors.cyan,
-                        selectionColor: Colors.cyan,
-                        selectionHandleColor: Colors.cyan,
+                        cursorColor: Colors.yellow[700],
+                        selectionColor: Colors.yellow[700],
+                        selectionHandleColor: Colors.yellow[700],
                       ),
                       cupertinoOverrideTheme: CupertinoThemeData(
-                        primaryColor: Colors.cyan,
+                        primaryColor: Colors.yellow[700],
                       ),
                       outlinedButtonTheme: OutlinedButtonThemeData(
                         style: ButtonStyle(
@@ -170,7 +170,7 @@ class _MyAppState extends State<MyApp> {
                                 );
                               }
                               return BorderSide(
-                                color: Colors.cyan,
+                                color: Color.fromRGBO(251, 192, 45, 1),
                               );
                             },
                           ),
@@ -193,7 +193,7 @@ class _MyAppState extends State<MyApp> {
                                   .textTheme
                                   .button
                                   ?.copyWith(
-                                    color: Colors.cyan,
+                                    color: Colors.yellow[700],
                                   );
                             },
                           ),
@@ -203,7 +203,7 @@ class _MyAppState extends State<MyApp> {
                         style: ButtonStyle(
                           textStyle: MaterialStateProperty.all(
                             Theme.of(context).textTheme.button?.copyWith(
-                                  color: Colors.cyan,
+                                  color: Colors.yellow[700],
                                 ),
                           ),
                         ),
@@ -267,7 +267,7 @@ class MusicScreen extends StatelessWidget {
                       ),
                       TextSpan(
                         text: songs[index][1],
-                        style: TextStyle(color: Colors.blue),
+                        style: TextStyle(color: Colors.yellow[700]),
                         recognizer: TapGestureRecognizer()
                           ..onTap = () {
                             launch("https://open.spotify.com/track/" +
